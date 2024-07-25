@@ -216,6 +216,7 @@ func configurePullOptions(cfg *RepositoryConfig, opts *git.PullOptions) error {
 		opts.ReferenceName = plumbing.NewBranchReferenceName(cfg.Branch)
 		opts.SingleBranch = true
 	}
+	opts.Force = true
 	return nil
 }
 
